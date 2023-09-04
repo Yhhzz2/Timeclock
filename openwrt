@@ -1,0 +1,12 @@
+sudo apt-get update
+sudo apt-get install build-essential subversion libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc wget
+
+
+git clone https://github.com/openwrt/openwrt.git
+cd openwrt
+
+
+make menuconfig
+
+
+make -j8 # 使用-j参数指定并行编译的任务数，这里使用8个作为示例
